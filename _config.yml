@@ -1,0 +1,37 @@
+server_port: 4000
+url: http://nossograndedia.com
+title: "NossoGrandeDia"
+description: "..."
+logo: #"/images/logo.png"
+permalink: date
+author:
+    name: "David & Alice Joos"
+    email: davidandalice@nossograndedia.com
+sitemap:
+    changefreq: daily
+    priority: 0.5
+    page:
+        changefreq: monthly
+        priority: 0.5
+google-analytics:
+    account: UA-4871859-1
+woothemes:
+    placeholder:
+        woo_intro: true
+        woo_intro_heading: "Under construction"
+        woo_intro_text: "We are currently building a new site which will be ready soon..."
+        woo_social: false
+        woo_social_heading: "Follow me"
+        woo_twitter: https://twitter.com/davidjoos
+        woo_facebook:
+        woo_email:
+        woo_feed_url:
+        woo_countdown: false
+        woo_countdown_year: #2013
+        woo_countdown_month: #1
+        woo_countdown_day: #1
+        woo_countdown_hour: #0
+        woo_countdown_minute: #0
+        woo_countdown_heading: #"Site  will launch in..."
+        woo_newsletter: false
+        woo_newsletter_text: #"Sign up for my newsletter..."

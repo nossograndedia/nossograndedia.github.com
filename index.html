@@ -1,0 +1,63 @@
+---
+layout: default
+title: Home
+---
+<div id="content" class="col-full">
+  <div id="main">
+    {% if site.woothemes.placeholder.woo_intro %}
+    <div id="intro" class="block">
+      <h3><span>{{ site.woothemes.placeholder.woo_intro_heading }}</span></h3>
+      <p>{{ site.woothemes.placeholder.woo_intro_text }}</p>
+    </div><!-- #intro -->
+    {% endif %}
+    {% if site.woothemes.placeholder.woo_social %}
+    <div id="social" class="block">
+      <h3><span>{{ site.woothemes.placeholder.woo_social_heading }}</span></h3>
+      <div class="social-links">
+        {% if site.woothemes.placeholder.woo_twitter %}
+        <div class="link">
+            <a href="{{ site.woothemes.placeholder.woo_twitter }}" class="twitter">Twitter</a>
+        </div>
+        {% endif %}
+        {% if site.woothemes.placeholder.woo_facebook %}
+        <div class="link">
+          <a href="{{ site.woothemes.placeholder.woo_facebook }}" class="facebook">Facebook</a>
+        </div>
+        {% endif %}
+        {% if site.woothemes.placeholder.woo_email %}
+        <div class="link">
+            <a href="mailto:{{ site.woothemes.placeholder.woo_email }}" class="contact">Contact</a>
+        </div>
+        {% endif %}
+        {% if site.woothemes.placeholder.woo_feed_url %}
+        <div class="link last">
+            <a href="{{ site.woothemes.placeholder.woo_feed_url }}" class="subscribe">Subscribe</a>
+        </div>
+        {% endif %}
+        <div class="fix"></div>
+        </div>
+    </div><!-- #social -->
+    {% endif %}
+    {% if site.woothemes.placeholder.woo_countdown %}
+    <div id="countdown" class="block">
+      <h3><span>{{ site.woothemes.placeholder.woo_countdown_heading }}</span></h3>        
+      <!-- Autofilled by the jQuery Countdown script in the header.php -->
+      <div id="timer"></div>
+    </div>
+    {% endif %}
+    {% if site.woothemes.placeholder.woo_newsletter %}
+    <div id="newsletter">
+      <p>{{ site.woothemes.placeholder.woo_newsletter_text }}</p>
+      <!-- Begin MailChimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form class="newsletter-form" action="{{ site.newsletter.mailchimp.list.url}}" method="post" target="popupwindow" onsubmit="window.open('{{ site.newsletter.mailchimp.list.url}}', 'popupwindow', 'scrollbars=yes,width=650,height=520');return true">
+          <input type="text" name="EMAIL" class="required email" value="E-mail" id="mce-EMAIL" onfocus="if (this.value == 'E-mail') {this.value = '';}" onblur="if (this.value == '') {this.value = 'E-mail';}">
+          <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="btn submit button">
+        </form>
+      </div>
+      <!--End mc_embed_signup-->
+      <div class="fix"></div>
+    </div>
+    {% endif %}
+  </div>
+</div><!-- /#content -->

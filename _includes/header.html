@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+	<meta charset="utf-8">
+
+	<title>{{ site.title }} &bull; {{ page.title }}</title>
+	{% if page.description %}
+	<meta name="description" content="{{page.description}}">
+	{% else %}
+	<meta name="description" content="{{site.description}}">
+	{% endif %}
+	<meta name="author" content="{{ site.author.name }}">
+
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url}}/atom.xml" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/styles/default.css" media="screen" />
+
+	<script type="text/javascript" src="/js/jquery.js"></script>
+
+	{% if site.woothemes.placeholder.woo_countdown %}
+	<script type="text/javascript" src="/js/jquery.countdown.min.js"></script>
+
+	<script type="text/javascript">
+		jQuery(function () {
+			jQuery('#timer').countdown({until: new Date({{site.woothemes.placeholder.woo_countdown_year}},{{site.woothemes.placeholder.woo_countdown_month}}-1/*0-11*/,{{site.woothemes.placeholder.woo_countdown_day}},{{site.woothemes.placeholder.woo_countdown_hour}},{{site.woothemes.placeholder.woo_countdown_minute}}), format: 'DHMS'});
+		});
+	</script>
+	{% endif %}
+
+	{% include google-analytics.html %}
+</head>
