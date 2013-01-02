@@ -1,0 +1,32 @@
+{% include header.html %}
+
+	<body>
+		<div id="real_estate">
+			<div id="header">
+				{% assign level = 1 %}
+				{% include menu.html %}
+				{% include picture.html %}
+			</div>
+
+			<div id="content">
+			  <table class="content">
+			    <tbody>
+			      <tr>
+			        <td>
+			          <div class="title">{{ page.title }}</div>
+			        </td>
+			      </tr>
+			      <tr>
+			        <td class="content">
+			          {{ content }}
+			        </td>
+			      </tr>
+			      <tr>
+			        <td class="actions">
+			        </td>
+			      </tr>
+			    </tbody>
+			  </table>
+			</div>
+
+{% include footer.html %}

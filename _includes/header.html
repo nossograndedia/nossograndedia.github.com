@@ -11,21 +11,11 @@
 	{% endif %}
 	<meta name="author" content="{{ site.author.name }}">
 
+	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url}}/atom.xml" />
 	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="/css/styles/default.css" media="screen" />
-
-	<script type="text/javascript" src="/js/jquery.js"></script>
-
-	{% if site.woothemes.placeholder.woo_countdown %}
-	<script type="text/javascript" src="/js/jquery.countdown.min.js"></script>
-
-	<script type="text/javascript">
-		jQuery(function () {
-			jQuery('#timer').countdown({until: new Date({{site.woothemes.placeholder.woo_countdown_year}},{{site.woothemes.placeholder.woo_countdown_month}}-1/*0-11*/,{{site.woothemes.placeholder.woo_countdown_day}},{{site.woothemes.placeholder.woo_countdown_hour}},{{site.woothemes.placeholder.woo_countdown_minute}}), format: 'DHMS'});
-		});
-	</script>
-	{% endif %}
+	<script type="text/javascript" src="/jwplayer/jwplayer.js" ></script>
+	<script type="text/javascript">jwplayer.key="{{ site.jwplayer.key }}";</script>
 
 	{% include google-analytics.html %}
 </head>

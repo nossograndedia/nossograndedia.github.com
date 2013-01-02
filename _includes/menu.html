@@ -1,0 +1,18 @@
+<div id="menu">
+	<ul class="menu">
+		{% for p in site.pages %}
+			{% if p.level == level and p.language == language %}
+				<li class="page_item{% if p.url == page.url %} current_page_item{% endif %}">
+					<a title="{{ p.title }}" href="{{ p.url }}">{{ p.title }}</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+	<ul class="languages">
+		<li>
+			<a href="/pt/" title="Veja este site em portugues"><img src="/images/{% if language == 'pt' %}br.gif{% else %}br_off.gif{% endif %}" /></a>
+			<a href="/nl/" title="Bekijk de site in het nederlands"><img src="/images/{% if language == 'nl' %}nl.gif{% else %}nl_off.gif{% endif %}" /></a>
+			<a href="/en/" title="View site in English"><img src="/images/{% if language == 'en' %}gb.gif{% else %}gb_off.gif{% endif %}" /></a>
+		</li>
+	</ul>
+</div>
